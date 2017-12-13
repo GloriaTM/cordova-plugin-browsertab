@@ -1,9 +1,9 @@
 {
-    "name": "cordova-plugin-browsertab",
+    "name": "cordova-plugin-browsertab-formapp",
     "version": "0.2.0",
-    "description": "In-app browser tabs for Android and iOS",
+    "description": "Cordova BrowserTab FormApp Plugin",
     "cordova": {
-        "id": "cordova-plugin-browsertab",
+        "id": "cordova-plugin-browsertab-formapp",
         "platforms": [
             "android"
         ]

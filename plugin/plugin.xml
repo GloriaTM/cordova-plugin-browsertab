@@ -4,7 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="cordova-plugin-browsertab"
     version="0.2.0">
-    <name>cordova-plugin-browsertab</name>
+    <name>cordova-plugin-browsertab-formapp</name>
     <description>
         This plugin provides an interface to in-app browser tabs that exist on
         some mobile platforms, specifically Custom Tabs on Android and
@@ -20,7 +20,7 @@
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="BrowserTab">
                 <param name="android-package"
-                    value="com.google.cordova.plugin.browsertab.BrowserTab" />
+                    value="com.rafaelodassi.cordova.browsertab.BrowserTab" />
             </feature>
         </config-file>
         <source-file src="src/android/BrowserTab.java"
