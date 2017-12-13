@@ -3,7 +3,7 @@
     xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="cordova-plugin-browsertab-formapp"
-    version="0.5.0">
+    version="0.6.0">
     <name>cordova-plugin-browsertab-formapp</name>
     <description>
         This plugin provides an interface to in-app browser tabs that exist on
@@ -11,6 +11,8 @@
         SFSafariViewController on iOS.
     </description>
     <dependency id="cordova-plugin-compat" version="^1.0.0" />
+
+    <repo>https://github.com/rafaelodassi/cordova-plugin-browsertab-formapp.git</repo>
 
     <js-module name="BrowserTab" src="www/browsertab.js">
         <clobbers target="cordova.plugins.browsertab" />

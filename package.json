@@ -1,12 +1,16 @@
 {
     "name": "cordova-plugin-browsertab-formapp",
-    "version": "0.5.0",
+    "version": "0.6.0",
     "description": "Cordova BrowserTab FormApp Plugin",
     "cordova": {
         "id": "cordova-plugin-browsertab-formapp",
         "platforms": [
             "android"
         ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/rafaelodassi/cordova-plugin-browsertab-formapp"
     },
     "keywords": [
         "sfsafariviewcontroller",
