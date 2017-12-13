@@ -12,7 +12,7 @@
  * limitations under the License.
  */
 
-package com.google.cordova.plugin.browsertab;
+package com.rafaelodassi.cordova.browsertab;
 
 import android.content.Intent;
 import android.content.pm.PackageManager;
