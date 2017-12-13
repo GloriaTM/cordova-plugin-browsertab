@@ -101,7 +101,11 @@ public class BrowserTab extends CordovaPlugin {
       callbackContext.error("no in app browser tab implementation available");
     }
 
-    Intent customTabsIntent = new CustomTabsIntent.Builder().build().intent;
+    CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
+    //builder.setToolbarColor();
+    builder.setShowTitle(false);
+
+    Intent customTabsIntent = builder.build().intent;
     customTabsIntent.setData(Uri.parse(urlStr));
     customTabsIntent.setPackage(mCustomTabsBrowser);
     cordova.getActivity().startActivity(customTabsIntent);
