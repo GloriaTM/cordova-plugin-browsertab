@@ -35,7 +35,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.graphics.Color;
-import android.graphics.BitmapFactory;
+//import android.graphics.Bitmap;
+//import android.graphics.BitmapFactory;
+//import android.content.res.Resources;
 
 /**
  * Cordova plugin which provides the ability to launch a URL in an
@@ -112,9 +114,14 @@ public class BrowserTab extends CordovaPlugin {
     // Set tab color
     String tabColor = "#1976D2";
     customTabsIntentBuilder.setToolbarColor(colorParser.parseColor(tabColor));
-    customTabsIntentBuilder.setCloseButtonIcon(BitmapFactory.decodeResource(getResources(), R.drawable.ic_arrow_back));
-    customTabsIntentBuilder.showTitle(false);
+
+    /*Resources activityRes = cordova.getActivity().getResources();
+    int backResId = activityRes.getIdentifier("ic_arrow_back", "drawable", cordova.getActivity().getPackageName());
+    Bitmap mainCloseBitmap = BitmapFactory.decodeResource(activityRes, backResId);
+    customTabsIntentBuilder.setCloseButtonIcon(mainCloseBitmap);*/
+
     customTabsIntentBuilder.enableUrlBarHiding();
+    customTabsIntentBuilder.setShowTitle(true);
 
     // Create Intent
     CustomTabsIntent customTabsIntent = customTabsIntentBuilder.build();
