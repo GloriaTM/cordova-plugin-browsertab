@@ -47,6 +47,8 @@
   }
 
   _safariViewController = [[SFSafariViewController alloc] initWithURL:url];
+  _safariViewController.delegate = self;
+  
   if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"10.0")) {
       _safariViewController.preferredBarTintColor = [self colorFromRGBA:  [themeableArgs objectForKey:@"toolbarColor"] ?: @"#1976D2"];
   } else {
@@ -59,11 +61,7 @@
   [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
 }
 
-- (void)close:(CDVInvokedUrlCommand *)command {
-  [[NSNotificationCenter defaultCenter] postNotificationName:@"eventName"
-                                                    object:nil
-                                                  userInfo:@{ @"data":@"test"}];
-
+- (void)close:(CDVInvokedUrlCommand *)command {  
   if (!_safariViewController) {
     return;
   }
@@ -92,6 +90,12 @@
                            green:(rgbaVal >> 16 & 0xFF) / 255.0f
                             blue:(rgbaVal >> 8 & 0xFF) / 255.0f
                            alpha:(rgbaVal & 0xFF) / 255.0f];
+}
+
+- (void)safariViewControllerDidFinish:(SFSafariViewController *)controller {    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"browserTabDidFinish"
+                                                      object:nil
+                                                      userInfo:@{ @"data":@"test"}];
 }
 
 @end
