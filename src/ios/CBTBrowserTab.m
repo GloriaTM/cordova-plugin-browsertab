@@ -22,6 +22,10 @@
 }
 
 - (void)isAvailable:(CDVInvokedUrlCommand *)command {
+  [[NSNotificationCenter defaultCenter] postNotificationName:@"eventName"
+                                                    object:nil
+                                                  userInfo:@{ @"data":@"test"}];
+
   BOOL available = ([SFSafariViewController class] != nil);
   CDVPluginResult *result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK
                                                 messageAsBool:available];
