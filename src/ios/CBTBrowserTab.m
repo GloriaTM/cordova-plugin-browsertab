@@ -21,11 +21,7 @@
   SFSafariViewController *_safariViewController;
 }
 
-- (void)isAvailable:(CDVInvokedUrlCommand *)command {
-  [[NSNotificationCenter defaultCenter] postNotificationName:@"eventName"
-                                                    object:nil
-                                                  userInfo:@{ @"data":@"test"}];
-
+- (void)isAvailable:(CDVInvokedUrlCommand *)command {  
   BOOL available = ([SFSafariViewController class] != nil);
   CDVPluginResult *result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK
                                                 messageAsBool:available];
@@ -64,6 +60,10 @@
 }
 
 - (void)close:(CDVInvokedUrlCommand *)command {
+  [[NSNotificationCenter defaultCenter] postNotificationName:@"eventName"
+                                                    object:nil
+                                                  userInfo:@{ @"data":@"test"}];
+
   if (!_safariViewController) {
     return;
   }
