@@ -112,7 +112,7 @@ public class BrowserTab extends CordovaPlugin {
     CustomTabsIntent.Builder customTabsIntentBuilder = new CustomTabsIntent.Builder();
 
     // Set tab color
-    String tabColor = "#1A3151";
+    String tabColor = "#000000";
     customTabsIntentBuilder.setToolbarColor(colorParser.parseColor(tabColor));
 
     /*Resources activityRes = cordova.getActivity().getResources();
