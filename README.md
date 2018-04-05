@@ -17,8 +17,6 @@
     under the License.
 -->
 
-`cordova-plugin-browsertab-formapp` é um fork de [cordova-plugin-browsertab](https://github.com/google/cordova-plugin-browsertab). Acesse a [documentação](https://github.com/google/cordova-plugin-browsertab) completa no repositório original.
-
 License
 -------
 
