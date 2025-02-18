@@ -1,6 +1,6 @@
 {
     "name": "cordova-plugin-browsertab-formapp",
-    "version": "0.8.8",
+    "version": "0.8.9",
     "description": "Cordova BrowserTab FormApp Plugin",
     "cordova": {
         "id": "cordova-plugin-browsertab-formapp",
